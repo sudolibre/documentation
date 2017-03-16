@@ -15,7 +15,7 @@ Let's jump right in to make a simple HTTP Request. Here's a basic `GET` request 
 ```swift
 let query = ...
 let spotifyResponse = try drop.client.get("https://api.spotify.com/v1/search?type=artist&q=\(query)")
-print(spotifyR)
+print(spotifyResponse)
 ```
 
 ### Clean Up
@@ -117,7 +117,7 @@ for i in 0...1 {
 
 ## ClientProtocol
 
-Up to this point, we've focused on the built in `HTTP.Client`, but users can also include their own customized clients by conforming to `HTTP.ClientProtocol`. Let's look at the implementation:
+Up to this point, we've focused on the built-in `HTTP.Client`, but users can also include their own customized clients by conforming to `HTTP.ClientProtocol`. Let's look at the implementation:
 
 ```swift
 public protocol Responder {
